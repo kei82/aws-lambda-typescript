@@ -1,0 +1,10 @@
+{
+  "httpMethod": "POST",
+  "path": "/test",
+  "headers": { "Content-Type": "application/json" },
+  "body": "{ \"accountName\": \"ntjnjjjjjn\", \"email\": \"n\" }",
+  "multiValueHeaders": {
+    "X-header-bar": ["sample-value2", "sample-value1"]
+  },
+  "pathParameters": null
+}

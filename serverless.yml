@@ -1,0 +1,30 @@
+service: aws-node-typescript # NOTE: update this with your service name
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  test:
+    handler: src/handler.handler
+    events:
+      - http:
+          path: /test
+          method: get
+  test2:
+    handler: src/handler2.handler
+    events:
+      - http:
+          path: /test2
+          method: get
+  test3:
+    handler: src/handler3.handler
+    events:
+      - http:
+          path: /test3
+          method: post
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline

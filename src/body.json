@@ -1,0 +1,16 @@
+{
+  "httpMethod": "POST",
+  "path": "/test",
+  "headers": { "Content-Type": "application/json" },
+  "body": "{ \"accountName\": \"ntjnjjjjjn\", \"email\": \"nt\" }",
+  "multiValueHeaders": {
+    "X-header-bar": ["sample-value2", "sample-value1"]
+  },
+  "queryStringParameters": {
+    "age": "25"
+  },
+  "multiValueQueryStringParameters": {
+    "type": ["1", "2", "4"]
+  },
+  "pathParameters": null
+}

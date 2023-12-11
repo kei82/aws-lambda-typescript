@@ -1,0 +1,11 @@
+{
+  "httpMethod": "GET",
+  "path": "/test2",
+  "headers": {},
+  "multiValueHeaders": {
+    "X-header-bar": ["sample-value2", "sample-value1"]
+  },
+  "queryStringParameters": {},
+  "multiValueQueryStringParameters": {},
+  "pathParameters": null
+}
