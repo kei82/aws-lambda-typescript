@@ -13,7 +13,7 @@ import httpEventNormalizer from "@middy/http-event-normalizer";
 import validator from "@middy/validator";
 import { transpileSchema } from "@middy/validator/transpile";
 import cors from "@middy/http-cors";
-import validateErrorHandler from "./validateErrorHandler";
+import customErrorMessageHandler from "./customErrorMessageHandler";
 
 /**
  * APIGatewayProxyEvent の型を JSON Schema の型で拡張する
@@ -71,11 +71,6 @@ export const middyfy = <
   eventSchema: Record<string, unknown> | null = null
 ) => {
   const wrapper = middy()
-    // .use(httpErrorHandler({ fallbackMessage: "ddd" }))
-    .use(validateErrorHandler())
-    .use(httpHeaderNormalizer())
-    .use(httpJsonBodyParser({ disableContentTypeError: true }))
-    .use(httpEventNormalizer())
     .use(cors())
     .use(
       httpResponseSerializer({
@@ -87,7 +82,12 @@ export const middyfy = <
         ],
         defaultContentType: "application/json",
       })
-    );
+    )
+    .use(httpErrorHandler())
+    .use(customErrorMessageHandler())
+    .use(httpHeaderNormalizer())
+    .use(httpJsonBodyParser({ disableContentTypeError: true }))
+    .use(httpEventNormalizer());
 
   if (eventSchema) {
     wrapper.use(

@@ -9,6 +9,14 @@ const queryStringSchema = {
       type: "number",
       enum: [25],
     },
+    dd: {
+      type: "number",
+    },
+    gg: {
+      type: "string",
+      minLength: 2,
+      maxLength: 4,
+    },
   },
 } as const;
 

@@ -1,0 +1,59 @@
+{
+  "type": {
+    "errorMessage": "data type does not match"
+  },
+  "const": {
+    "errorMessage": "must be equal to constant"
+  },
+  "dependentRequired": {
+    "errorMessage": "must have when property is present"
+  },
+  "enum": {
+    "errorMessage": "must be equal to one of the allowed values"
+  },
+  "maxContains": {
+    "errorMessage": "\"maxContains\" without \"contains\" is ignored"
+  },
+  "minContains": {
+    "errorMessage": "\"minContains\" without \"contains\" is ignored"
+  },
+  "maxItems": {
+    "errorMessage": "must not have maximum than items"
+  },
+  "minItems": {
+    "errorMessage": "must not have minimum than items"
+  },
+  "maxLength": {
+    "errorMessage": "must not have large number than characters"
+  },
+  "maximum": {
+    "errorMessage": "exceeds maximum"
+  },
+  "minimum": {
+    "errorMessage": "below minimum"
+  },
+  "exclusiveMaximum": {
+    "errorMessage": "less than"
+  },
+  "exclusiveMinimum": {
+    "errorMessage": "greater than"
+  },
+  "maxProperties": {
+    "errorMessage": "must not have max than properties"
+  },
+  "minProperties": {
+    "errorMessage": "must not have min than properties"
+  },
+  "multipleOf": {
+    "errorMessage": "not a multiple"
+  },
+  "pattern": {
+    "errorMessage": "pattern does not match"
+  },
+  "required": {
+    "errorMessage": "must have required property"
+  },
+  "uniqueItems": {
+    "errorMessage": "must not have duplicate items"
+  }
+}

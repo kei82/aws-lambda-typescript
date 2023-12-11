@@ -5,7 +5,7 @@
   "multiValueHeaders": {
     "X-header-bar": ["sample-value2", "sample-value1"]
   },
-  "queryStringParameters": {},
+  "queryStringParameters": { "dd": "error", "gg": "errorerrorerror", "vv": 34 },
   "multiValueQueryStringParameters": {},
   "pathParameters": null
 }
